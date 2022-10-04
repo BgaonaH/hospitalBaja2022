@@ -93,7 +93,8 @@ export default {
   border: 3px solid #283747;
   border-radius: 10px;
   width: 35%;
-  height: 90%;
+  height: 130%;
+  background: #e5e7e9;
   display: flex;
   flex-direction: column;
   justify-content: center;

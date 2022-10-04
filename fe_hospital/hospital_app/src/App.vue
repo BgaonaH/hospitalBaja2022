@@ -49,7 +49,7 @@
       </router-view>
     </div>
     <div class="footer">
-      <h2>Misión Tic 2022</h2>
+      <h2>BAJA Scrum/MisiónTic 2022</h2>
     </div>
   </div>
 </template>
@@ -202,7 +202,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 </style>

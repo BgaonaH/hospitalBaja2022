@@ -62,6 +62,7 @@ export default {
   border-radius: 10px;
   width: 25%;
   height: 60%;
+  background: #e5e7e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
