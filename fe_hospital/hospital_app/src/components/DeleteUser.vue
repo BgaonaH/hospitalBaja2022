@@ -3,7 +3,7 @@
     <div class="deleteuserid">
       <h2>Eliminar usuario</h2>
       <form v-on:submit.prevent="processDeleteUser">
-        <input type="number" v-model="user.id" placeholder="id usuario" />
+        <input type="number" v-model="usuario.id" placeholder="id usuario" />
         <br />
         <button type="submit">Eliminar</button>
       </form>
@@ -17,7 +17,7 @@ export default {
   name: "DeleteUser",
   data: function () {
     return {
-      user: {
+      usuario: {
         id: "",
       },
     };
@@ -25,7 +25,7 @@ export default {
   methods: {
     processDeleteUser: function () {
       axios
-        .delete(`https://desplieguebe.herokuapp.com/user/${this.user.id}`, {
+        .delete(`http://127.0.0.1:8000/user/${this.usuario.id}`, {
           headers: {},
         })
         .then((result) => {

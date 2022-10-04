@@ -5,7 +5,7 @@
       <form v-on:submit.prevent="processDeletePsalud">
         <input
           type="number"
-          v-model="psalud.id"
+          v-model="medico.id"
           placeholder="id personal salud"
         />
         <br />
@@ -21,7 +21,7 @@ export default {
   name: "deletepsalud",
   data: function () {
     return {
-      psalud: {
+      medico: {
         id: "",
       },
     };
@@ -29,10 +29,9 @@ export default {
   methods: {
     processDeletePsalud: function () {
       axios
-        .delete(
-          `https://desplieguebe.herokuapp.com/personalSaludconsulta/${this.psalud.id}`,
-          { headers: {} }
-        )
+        .delete(`http://127.0.0.1:8000/personalsalud/${this.medico.id}`, {
+          headers: {},
+        })
         .then((result) => {
           alert("Elemento eliminado");
         })

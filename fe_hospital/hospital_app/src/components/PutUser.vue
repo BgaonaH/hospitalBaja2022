@@ -56,7 +56,7 @@ export default {
         },
         methods: {
             processPutUser: function(){
-                axios.put(`https://desplieguebe.herokuapp.com/user/${this.user.id}`, this.user, {headers:{}}
+                axios.put(`http://127.0.0.1:8000/user/${this.user.id}`, this.user, {headers:{}}
                 ) .then((result) => {
                     console.log(result)
                    alert("Elemento modificado");
