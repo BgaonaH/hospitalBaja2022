@@ -30,7 +30,7 @@ export default{
     },
     methods: {
         processPostPsalud: function(){
-            axios.post("https://mision-hosp.herokuapp.com/personalsaludCrear/",
+            axios.post("https://desplieguebe.herokuapp.com/personalsaludCrear/",
             this.psalud, 
             {headers:{}}) 
             .then((result) => {

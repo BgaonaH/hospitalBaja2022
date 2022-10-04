@@ -23,7 +23,7 @@
         },
         methods:{
             processgetPsalud: function(){
-                axios.get(`http://127.0.0.1:8000/personalSaludconsulta/${this.psalud.id}`, 
+                axios.get(`https://desplieguebe.herokuapp.com/personalSaludconsulta/${this.psalud.id}`, 
                 {headers:{}}).then((result)=>{
                     alert(JSON.stringify(result.data, null, ' '));
                 })

@@ -25,7 +25,7 @@ export default {
         },
         methods: {
             processRequestUser: function(){
-                axios.get(`https://mision-hosp.herokuapp.com/user/${this.user.id}`, {headers:{}}
+                axios.get(`https://desplieguebe.herokuapp.com/user/${this.user.id}`, {headers:{}}
                 ) .then((result) => {
                    alert(JSON.stringify(result.data,null, ' '));
 

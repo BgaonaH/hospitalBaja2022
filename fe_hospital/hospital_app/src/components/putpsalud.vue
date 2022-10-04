@@ -32,7 +32,7 @@
         },
         methods: {
             processputPsalud: function(){
-                axios.put(`http://127.0.0.1:8000/personalSaludconsulta/${this.psalud.id}`, this.psalud, {headers:{}})
+                axios.put(`https://desplieguebe.herokuapp.com/personalSaludconsulta/${this.psalud.id}`, this.psalud, {headers:{}})
                 .then((result)=>{
                     console.log(result)
                     alert("Elemento modificado");

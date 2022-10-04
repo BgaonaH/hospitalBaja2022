@@ -56,7 +56,7 @@ export default {
         },
         methods: {
             processPutUser: function(){
-                axios.put(`https://mision-hosp.herokuapp.com/user/${this.user.id}`, this.user, {headers:{}}
+                axios.put(`https://desplieguebe.herokuapp.com/user/${this.user.id}`, this.user, {headers:{}}
                 ) .then((result) => {
                     console.log(result)
                    alert("Elemento modificado");

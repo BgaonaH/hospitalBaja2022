@@ -54,7 +54,7 @@ export default {
     methods: {
         processSignUp: function(){
         axios.post(
-            "https://mision-hosp.herokuapp.com/usercrear/",
+            "https://desplieguebe.herokuapp.com/usercrear/",
             this.user,
             {headers: {}}
         )

@@ -1,9 +1,9 @@
-from urllib import request, response
-from rest_framework import status, views
+from ast import Delete
+from Hospital_Backend.models.usuario import Usuario
+from Hospital_Backend.serializers.usuarioSerializer import UsuarioSerializer
+from rest_framework  import views, status
 from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
-from Hospital_Backend.serializers.usuarioSerializer import UsuarioSerializer
 
 class CrearUsuarioView(views.APIView):
     def post(self, request, **kwargs):
@@ -24,6 +24,12 @@ class CrearUsuarioView(views.APIView):
 from Hospital_Backend.models.usuario import Usuario
 
 class UsuarioView(views.APIView):
+
+    def delete(self, request, pk, format=None):
+        modelo=Usuario.objects.get(pk=pk)
+        modelo.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
     def get(self, request, pk, format=None):
         model=Usuario.objects.get(pk=pk)
         serializer=UsuarioSerializer(model)
@@ -36,8 +42,3 @@ class UsuarioView(views.APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-    def delete(self, request, pk, format=None):
-        modelo=Usuario.objects.get(pk=pk)
-        modelo.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
